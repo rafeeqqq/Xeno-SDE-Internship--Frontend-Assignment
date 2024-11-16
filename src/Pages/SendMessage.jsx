@@ -83,7 +83,12 @@ const SendMessage = () => {
     const fetchMessages = async () => {
       try {
         const response = await axios.get(
-          "https://xeno-sde-internship-assignment.onrender.com/api/communicationLogs"
+          "https://xeno-sde-internship-assignment.onrender.com/api/communicationLogs",
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
         );
         setMessages(response.data);
       } catch (error) {
@@ -104,10 +109,16 @@ const SendMessage = () => {
     try {
       const response = await axios.post(
         "https://xeno-sde-internship-assignment.onrender.com/api/communicationLogs",
+
         {
           campaignId: selectedCampaign,
           message: messageContent,
           customers: filteredCustomers.map((customer) => customer._id),
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
         }
       );
       message.success("Message sent successfully!");
