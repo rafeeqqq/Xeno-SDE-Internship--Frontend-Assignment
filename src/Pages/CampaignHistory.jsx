@@ -66,7 +66,7 @@ const CampaignHistory = ({ data, fetchData }) => {
   const handleSubmit = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/campaigns",
+        "https://xeno-sde-internship-assignment.onrender.com/api/campaigns",
         newCampaign
       );
       message.success("Campagin Created sucessfully");

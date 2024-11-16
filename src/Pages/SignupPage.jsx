@@ -18,7 +18,7 @@ const SignupPage = () => {
   const handleSignup = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/auth/signup",
+        "https://xeno-sde-internship-assignment.onrender.com/api/auth/signup",
         {
           email,
           password,

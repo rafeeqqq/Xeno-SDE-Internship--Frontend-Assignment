@@ -60,7 +60,7 @@ const Dashboard = () => {
 
     try {
       const customersResponse = await fetch(
-        "http://localhost:5000/api/customers",
+        "https://xeno-sde-internship-assignment.onrender.com/api/customers",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -92,7 +92,7 @@ const Dashboard = () => {
       ]);
 
       const campaignsResponse = await fetch(
-        "http://localhost:5000/api/campaigns",
+        "https://xeno-sde-internship-assignment.onrender.com/api/campaigns",
         {
           headers: {
             Authorization: `Bearer ${token}`,

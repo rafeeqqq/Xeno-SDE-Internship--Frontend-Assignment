@@ -19,7 +19,7 @@ const LoginPage = () => {
   const handleLogin = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/auth/login",
+        "https://xeno-sde-internship-assignment.onrender.com/api/auth/login",
         {
           email,
           password,
@@ -37,7 +37,10 @@ const LoginPage = () => {
   const handleGoogleLogin = (response) => {
     const { credential } = response;
     axios
-      .post("http://localhost:5000/api/auth/google", { token: credential })
+      .post(
+        "https://xeno-sde-internship-assignment.onrender.com/api/auth/google",
+        { token: credential }
+      )
       .then((res) => {
         if (res.data.success) {
           localStorage.setItem("token", res.data.token);

@@ -71,7 +71,7 @@ const CustomerData = ({ data, campagindata, fetchData }) => {
   const handleCreateCustomer = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/customers",
+        "https://xeno-sde-internship-assignment.onrender.com/api/customers",
         newCustomer,
         {
           headers: {

@@ -29,7 +29,7 @@ const SendMessage = () => {
     const fetchCampaigns = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/campaigns",
+          "https://xeno-sde-internship-assignment.onrender.com/api/campaigns",
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -49,7 +49,9 @@ const SendMessage = () => {
   useEffect(() => {
     const fetchCustomers = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/customers");
+        const response = await axios.get(
+          "https://xeno-sde-internship-assignment.onrender.com/api/customers"
+        );
         setCustomers(response.data);
       } catch (error) {
         console.error("Error fetching customers:", error);
@@ -76,7 +78,7 @@ const SendMessage = () => {
     const fetchMessages = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/communicationLogs"
+          "https://xeno-sde-internship-assignment.onrender.com/api/communicationLogs"
         );
         setMessages(response.data);
       } catch (error) {
@@ -96,7 +98,7 @@ const SendMessage = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/communicationLogs",
+        "https://xeno-sde-internship-assignment.onrender.com/api/communicationLogs",
         {
           campaignId: selectedCampaign,
           message: messageContent,
