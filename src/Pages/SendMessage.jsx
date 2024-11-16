@@ -50,7 +50,12 @@ const SendMessage = () => {
     const fetchCustomers = async () => {
       try {
         const response = await axios.get(
-          "https://xeno-sde-internship-assignment.onrender.com/api/customers"
+          "https://xeno-sde-internship-assignment.onrender.com/api/customers",
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
         );
         setCustomers(response.data);
       } catch (error) {
