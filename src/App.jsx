@@ -16,7 +16,7 @@ const App = () => {
     <Router>
       <Routes>
         <Route
-          path="/login"
+          path="/"
           element={
             <GoogleOAuthProvider clientId="429751468467-a916nkk17vcqj3k8o6jnhm2rmh1j3daq.apps.googleusercontent.com">
               <LoginPage />
